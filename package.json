@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "name": "zerodha-bot-extension",
+  "version": "0.0.1",
+  "description": "A zerodha auto trading extension for chrome, edge",
+  "keywords": [
+    "chrome-extension",
+    "web-extension",
+    "javascript",
+    "svelte",
+    "rollup",
+    "boilerplate"
+  ],
+  "author": "Santosh Anand <santoshanand.jogi@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@tailwindcss/typography": "^0.4.1",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/svelte": "^3.0.3",
+    "@types/chrome": "^0.0.154",
+    "@types/lodash": "^4.14.172",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "rollup": "^2.36.2",
+    "rollup-plugin-chrome-extension": "^3.5.2",
+    "rollup-plugin-empty-dir": "^1.0.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-zip": "^1.0.1",
+    "svelte-jester": "^1.3.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "postcss": "^8.2.4",
+    "svelte": "^3.31.2",
+    "tailwindcss": "^2.0.2"
+  }
+}

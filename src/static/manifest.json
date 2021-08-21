@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Trading Bot Extension",
+  "description": "Trading bot for the Zerodha and Upstox",
+  "version": "1.0",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "js/vendor.js",
+        "js/content_script.js",
+        "inject.js"
+      ]
+    }
+  ],
+  "background": {
+    "persitent": true,
+    "scripts": [
+      "js/vendor.js",
+      "js/background.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "injected.js"
+  ]
+}

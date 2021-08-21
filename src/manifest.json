@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Zerodha Auto Trading",
+  "description": "Trading bot for the Zerodha",
+  "version": "1.0",
+  "options_ui": {
+    "page": "options/index.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": "static/icon.png",
+    "default_popup": "popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.zerodha.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "content/index.js",
+        "utils/injecter.js"
+      ]
+    }
+  ],
+  "background": {
+    "persitent": true,
+    "scripts": [
+      "background/index.js"
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*.zerodha.com/*",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "utils/http-intercepter.js",
+    "utils/zepto.min.js"
+  ]
+}
